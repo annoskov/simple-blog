@@ -31,12 +31,14 @@ const Header = ({ siteTitle }) => (
     <nav>
       <ul
         style={{
-          padding: '25px 0 0 30px',
+          padding: '20px 0 0 30px',
           margin: 0,
+          height: '100%',
           fontSize: '28px',
           width: '316px',
           display: "flex",
           justifyContent: "space-between",
+          alignItems: "center",
           listStyleType: "none",
         }}>
         <li>

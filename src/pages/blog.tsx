@@ -1,16 +1,14 @@
-import * as React from 'react'
-import Footer from "../components/footer"
-import Header from "../components/header"
+import * as React from "react"
+
+import Layout from "../components/layout"
 
 const BlogPage = () => {
   return (
-    <div>
-      <Header siteTitle={'Anton Noskov Blog'}/>
+    <Layout>
       <h1>Blog</h1>
       <p>Posts will show up here later on!</p>
-      <Footer/>
-    </div>
+    </Layout>
   )
 }
 
-export default BlogPage;
+export default BlogPage

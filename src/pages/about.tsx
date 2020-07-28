@@ -1,18 +1,16 @@
-import * as React from 'react';
-import {Link} from "gatsby"
-import Footer from "../components/footer"
-import Header from "../components/header"
+import * as React from "react"
+import { Link } from "gatsby"
+
+import Layout from "../components/layout"
 
 const AboutPage = () => {
   return (
-    <div>
-      <Header siteTitle={'Anton Noskov Blog'}/>
+    <Layout>
       <h1>About</h1>
       <p>My bio will be here</p>
-      <Link to={'/contact'}>My contacts</Link>
-      <Footer/>
-    </div>
+      <Link to={"/contact"}>My contacts</Link>
+    </Layout>
   )
 }
 
-export default AboutPage;
+export default AboutPage
