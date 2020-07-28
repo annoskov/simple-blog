@@ -2,27 +2,16 @@ import { Link } from "gatsby"
 import * as PropTypes from "prop-types"
 import * as React from "react"
 
+import headerStyles from './header.module.scss';
+
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-      display: "flex"
-    }}
-  >
-    <div
-      style={{
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`
-      }}
+  <header className={headerStyles.header}>
+    <div className={headerStyles.titleWrapper}
     >
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`
-          }}
+          className={headerStyles.title}
         >
           {siteTitle}
         </Link>
@@ -30,46 +19,27 @@ const Header = ({ siteTitle }) => (
     </div>
     <nav>
       <ul
-        style={{
-          padding: '20px 0 0 30px',
-          margin: 0,
-          height: '100%',
-          fontSize: '28px',
-          width: '316px',
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          listStyleType: "none",
-        }}>
+        className={headerStyles.navList}>
         <li>
           <Link
-            style={{
-              color: "white",
-              textDecoration: "none",
-              cursor: "pointer",
-            }}
+            className={headerStyles.link}
+            activeClassName={headerStyles.linkActive}
             to={"/blog"}>
             Blog
           </Link>
         </li>
         <li>
           <Link
-            style={{
-              color: "white",
-              textDecoration: "none",
-              cursor: "pointer",
-            }}
+            className={headerStyles.link}
+            activeClassName={headerStyles.linkActive}
             to={"/contact"}>
             Contacts
           </Link>
         </li>
         <li>
           <Link
-            style={{
-              color: "white",
-              textDecoration: "none",
-              cursor: "pointer",
-            }}
+            className={headerStyles.link}
+            activeClassName={headerStyles.linkActive}
             to={"/about"}>
             About
           </Link>

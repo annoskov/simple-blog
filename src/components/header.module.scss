@@ -1,0 +1,43 @@
+.header {
+  background: #fbfbff;
+  margin-bottom: 1.45rem;
+  display: flex;
+}
+
+.title-wrapper {
+  max-width: 960px;
+  padding: 1.45rem 1.0875rem;
+}
+
+.title {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-list {
+  padding: 20px 0 0 30px;
+  margin: 0;
+  height: 100%;
+  font-size: 28px;
+  //width: 316px;
+  display: flex;
+  //justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+.link {
+  color: #999999;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 1.3rem;
+
+  &:hover {
+    color: black;
+  }
+}
+
+.link-active {
+  color: black;
+}
