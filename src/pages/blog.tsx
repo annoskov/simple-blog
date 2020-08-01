@@ -24,7 +24,7 @@ const getPostData = () => {
 
 const getRenderedPostList = (posts: any) => {
   return posts.allMarkdownRemark.edges.map((edge: any) => {
-    return <li>
+    return <li key={edge.node.frontmatter.title}>
       <h2>{edge.node.frontmatter.title}</h2>
       <p>{edge.node.frontmatter.date}</p>
     </li>
