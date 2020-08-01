@@ -1,5 +1,5 @@
 ---
-    Title: "Gatsby",
+    title: "Gatsby"
     date: "30-02-2020"
 ---
 
