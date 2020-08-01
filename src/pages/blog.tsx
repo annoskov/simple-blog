@@ -1,7 +1,7 @@
 import * as React from "react"
 
 import Layout from "../components/layout"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 
 const getPostData = () => {
   return useStaticQuery(graphql`
@@ -15,6 +15,9 @@ const getPostData = () => {
                       }
                       html
                       excerpt
+                      fields {
+                          slug
+                      }
                   }
               }
           }
@@ -25,14 +28,16 @@ const getPostData = () => {
 const getRenderedPostList = (posts: any) => {
   return posts.allMarkdownRemark.edges.map((edge: any) => {
     return <li key={edge.node.frontmatter.title}>
-      <h2>{edge.node.frontmatter.title}</h2>
-      <p>{edge.node.frontmatter.date}</p>
+      <Link to={edge.node.fields.slug}>
+        <h2>{edge.node.frontmatter.title}</h2>
+        <p>{edge.node.frontmatter.date}</p>
+      </Link>
     </li>
   })
 }
 
 const BlogPage = () => {
-  const posts = getPostData();
+  const posts = getPostData()
 
   return (
     <Layout>
