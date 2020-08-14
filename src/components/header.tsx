@@ -2,11 +2,11 @@ import { Link } from "gatsby"
 import * as PropTypes from "prop-types"
 import * as React from "react"
 
-import headerStyles from './header.module.scss';
+import * as headerStyles from './header.module.scss';
 
 const Header = ({ siteTitle }) => (
   <header className={headerStyles.header}>
-    <div className={headerStyles.titleWrapper}
+    <div className={headerStyles["title-wrapper"]}
     >
       <h1 style={{ margin: 0 }}>
         <Link
@@ -19,11 +19,11 @@ const Header = ({ siteTitle }) => (
     </div>
     <nav>
       <ul
-        className={headerStyles.navList}>
+        className={headerStyles["nav-list"]}>
         <li>
           <Link
             className={headerStyles.link}
-            activeClassName={headerStyles.linkActive}
+            activeClassName={headerStyles["link-active"]}
             to={"/blog"}>
             Blog
           </Link>
@@ -31,7 +31,7 @@ const Header = ({ siteTitle }) => (
         <li>
           <Link
             className={headerStyles.link}
-            activeClassName={headerStyles.linkActive}
+            activeClassName={headerStyles["link-active"]}
             to={"/contact"}>
             Contacts
           </Link>
@@ -39,7 +39,7 @@ const Header = ({ siteTitle }) => (
         <li>
           <Link
             className={headerStyles.link}
-            activeClassName={headerStyles.linkActive}
+            activeClassName={headerStyles["link-active"]}
             to={"/about"}>
             About
           </Link>
